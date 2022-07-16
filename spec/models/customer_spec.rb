@@ -4,7 +4,7 @@ RSpec.describe Customer, type: :model do
 
   #fixtures :customers
 
-  it 'Create a customer' do
+  it '#full_name' do
     # Utilizando FactoryBot
     customer = create(:customer)
 
@@ -16,6 +16,8 @@ RSpec.describe Customer, type: :model do
     # subject.email = "jackson@pires.com"
     # subject.save
 
-    expect(customer.full_name).to eq("Sr. Jackson Pires")
+    expect(customer.full_name).to start_with("Sr. ")
   end
+
+  it { expect{ create(:customer)}.to change {Customer.all.size}.by(1) }
 end
