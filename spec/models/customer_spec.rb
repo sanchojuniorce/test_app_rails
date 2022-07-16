@@ -4,9 +4,14 @@ RSpec.describe Customer, type: :model do
 
   #fixtures :customers
 
+  it '#full_name - Sobrescrevendo Atributo' do
+    customer = create(:customer, name: "Jackson Pires")
+    expect(customer.full_name).to start_with("Sr. Jackson Pires")
+  end
+
   it '#full_name' do
     # Utilizando FactoryBot
-    customer = create(:customer)
+    customer = create(:user) #ou create(:customer)
 
     # Utilizando Fixtures
     #customer = customers(:jackson)
