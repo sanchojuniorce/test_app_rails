@@ -29,9 +29,10 @@ RSpec.describe Customer, type: :model do
     expect(customer.full_name).to start_with("Sr. ")
   end
 
-  it 'Usando' do
+  it 'Usando o attributes_for' do
     attrs = attributes_for(:customer)
-    puts attrs
+    customer = Customer.create(attrs)
+    expect(customer.full_name).to start_with("Sr. ")
   end
 
   it { expect{ create(:customer)}.to change {Customer.all.size}.by(1) }
