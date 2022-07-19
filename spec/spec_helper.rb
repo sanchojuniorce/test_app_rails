@@ -19,9 +19,10 @@ RSpec.configure do |config|
   # assertions if you prefer.
   
   #FactoryBot Lint
+  require 'factory_bot'
   config.before(:suite) do
     FactoryBot.lint
-  end  
+  end
 
   config.expect_with :rspec do |expectations|
     # This option will default to `true` in RSpec 4. It makes the `description`
