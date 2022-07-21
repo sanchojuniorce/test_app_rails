@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://jsonplaceholder.typicode.com/posts/2
+    uri: "<API-URL>/posts/2"
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 21 Jul 2022 00:41:57 GMT
+      - Thu, 21 Jul 2022 01:02:35 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -31,9 +31,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '1000'
       X-Ratelimit-Remaining:
-      - '997'
+      - '999'
       X-Ratelimit-Reset:
-      - '1657996195'
+      - '1658238793'
       Vary:
       - Origin, Accept-Encoding
       Access-Control-Allow-Credentials:
@@ -55,13 +55,13 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=cQucsCEdM5W4k2S3gtHs0vbGGlKGEavbxi9zTdoUWCtquM1iy%2FUsDoOREi8%2Fs9cqH75gtWC4bz6g7R0A3CHFGeYcwbzhJu4By30Oao8UX4zz%2FOJCPDwwlAQsU%2F%2FdyvNTGJ8QP25EXBHCIAZDbqgnP5w9OGK4TAyQVN0H"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Cdgr%2Bqklfi6Lnjl8xD77TFRN04ybOrI75aSnbV6HxMULgkODnpWgvMxEYGLBz4ZiVEPJS2dIGBn%2BIGd%2Fo5hv2lqqNMxF1EAXilY3oyCcU0zbOUb4QGLt9RRBOySyWrXlOm6FVwGav5sEsbwfnG7ob3jHNZtkPXUKY2uT"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 72dfe4d49ca88c15-EWR
+      - 72e0030edf6ea5f5-GRU
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
@@ -73,5 +73,5 @@ http_interactions:
           "title": "qui est esse",
           "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
         }
-  recorded_at: Thu, 21 Jul 2022 00:41:57 GMT
+  recorded_at: Thu, 21 Jul 2022 01:02:35 GMT
 recorded_with: VCR 6.0.0
