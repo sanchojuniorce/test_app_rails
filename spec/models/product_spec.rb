@@ -24,8 +24,24 @@ RSpec.describe Product, type: :model do
     expect(product.errors[:category]).to include("can't be blank")
   end
 
-  it 'return a product with a full description' do
-    product = create(:product)
-    expect(product.full_description).to eq("#{product.description} - #{product.price}")
+  context 'Validations' do
+    it { should validate_presence_of(:description) }
+    it { should validate_presence_of(:price) }
+    it { should validate_presence_of(:category) }
+
+    it { is_expected.to validate_presence_of(:description) }
+    it { is_expected.to validate_presence_of(:price) }
+    it { is_expected.to validate_presence_of(:category) }
   end
+
+  context 'Associations' do
+    it { is_expected.to belong_to(:category) }
+  end
+
+  context 'Instance Methods' do
+    it 'return a product with a full description' do
+      product = create(:product)
+      expect(product.full_description).to eq("#{product.description} - #{product.price}")
+    end
+  end  
 end
