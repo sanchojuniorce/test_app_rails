@@ -1,5 +1,6 @@
 FactoryBot.define do
-    factory :customer, aliases: [:user] do
+    #factory :customer, aliases: [:user] do
+    factory :customer do
 
         transient do
             upcased { false }
