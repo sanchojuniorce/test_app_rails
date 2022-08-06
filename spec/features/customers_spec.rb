@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Customers", type: :feature do
+RSpec.feature "Customers", type: :feature, js: true do
   it 'Visit index page' do
     visit(customers_path)
     #save_and_open_page
