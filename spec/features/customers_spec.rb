@@ -9,3 +9,4 @@ RSpec.feature "Customers", type: :feature, js: true do
     expect(page).to have_current_path(customers_path)
   end
 end
+
