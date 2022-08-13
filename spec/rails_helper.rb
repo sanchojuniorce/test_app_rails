@@ -34,6 +34,16 @@ rescue ActiveRecord::PendingMigrationError => e
 end
 RSpec.configure do |config|
 
+  config.include Devise::Test::ControllerHelpers, :type => :controller
+
+  Shoulda::Matchers.configure do |config|
+    config.integrate do |with|
+      with.test_framework :rspec
+      with.library :rails
+    end  
+  end  
+  # Time Helper
+  config.include ActiveSupport::Testing::TimeHelpers
   # FactoryBot
   config.include FactoryBot::Syntax::Methods
   

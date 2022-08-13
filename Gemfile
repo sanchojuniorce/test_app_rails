@@ -32,12 +32,21 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'devise'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 3.6'
-  gem 'factory_bot_rails', "~> 4.0"
+  gem 'factory_bot_rails', '~> 4.0'
+  gem 'faker'
+  gem 'httparty'
+  gem 'webmock'
+  gem 'vcr'
+  gem 'shoulda-matchers', '~> 3.1'
+  gem 'rails-controller-testing'
+  gem 'selenium-webdriver'
+  gem 'chromedriver-helper'
 end
 
 group :development do
@@ -50,6 +59,8 @@ group :development do
   gem 'spring-commands-rspec'
   gem 'capybara'
   gem 'rspec-json_expectations'
+  gem 'rubocop'
+  gem 'rubocop-rspec'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
