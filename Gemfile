@@ -58,6 +58,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'spring-commands-rspec'
   gem 'capybara'
+  gem 'rspec-json_expectations'
   gem 'rubocop'
   gem 'rubocop-rspec'
 end
